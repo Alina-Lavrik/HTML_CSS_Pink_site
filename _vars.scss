@@ -1,0 +1,9 @@
+$colorSelectSite: #EF5B70;
+$widthSite: 1140px;
+$backBlock: #222;
+$colorText: #000;
+$gapGrid: 30px;
+/*Отступ по сетке*/
+$thirdSite: calc(($widthSite - $gapGrid) / 3);
+/*1/3 сайта = (ширина сайта - отступы) / 3*/
+$widthBurgerMenu: 232px;
