@@ -4,3 +4,29 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@mixin centerBox() {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin headingConditions() {
+    color: $colorTextWhite;
+    font-size: 19.96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin textConditions() {
+    color: $colorTextWhite;
+    text-align: center;
+    font-size: 13.972px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
