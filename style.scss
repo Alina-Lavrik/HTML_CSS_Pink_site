@@ -240,7 +240,7 @@ a {
 
 .main_content {
     @include centerBox();
-    transform: translate(-50px, -50px);
+    transform: translate(0px, -50px);
     width: 1140px;
     height: 600.177px;
     flex-shrink: 0;
@@ -537,6 +537,121 @@ a {
     max-width: 360px;
 }
 
+.item-box {
+    // gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.item {
+    width: 360px;
+    position: relative;
+
+    &_img {
+        width: 100%;  // ширина картинки относительно блока item, чтобы картинка полностью заполнила блок
+        height: 100%;
+    }
+
+    &_name {
+        color: $colorText;
+        font-family: 'latoregular';
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 12.65px;
+        padding-left: 18px;
+    }
+
+    &_description {
+        color: #5D5D5D;
+        font-family: 'latolight';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        padding-left: 16.5px;
+        padding-bottom: 18px;
+    }
+
+    &_price {
+        color: $colorSelectSite;
+        font-family: 'latolight';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 18px;
+    }
+}
+
+.card-link {
+    width: 360px;
+    text-decoration: none;
+    // display: block;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.txt-box {
+    padding-top: 24.4px;
+    padding-bottom: 20px;
+    background-color: #F8F8F8;
+}
+
+
+// эффект наведения - тень
+.item:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+// эффект наведения - затемнение картинки
+.item:hover .item_img {
+    filter: brightness(30%);
+}
+
+.add_two-box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 98px;
+    width: 100%;
+    pointer-events: none;
+
+}
+
+.add_two {
+    display: none;  // flex было
+    padding: 8px;
+    font-family: 'latolight';
+    color: $colorTextWhite;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    align-items: center; // центрируется текст отновительно картинки
+    border: 1px solid $colorTextWhite;
+    pointer-events: all; // возвращаем все необходимые свойства
+
+    &-img {
+        margin-right: 10px;
+    }
+}
+
+.add_two:hover {
+    box-shadow: 0px 5px 8px 0px $colorTextWhite;
+}
+
+// эффект появления кнопки add to cart 
+.item:hover .add_two {
+    display: flex;
+}
+
 .subscription {
   
     background-image: url("img/Layer_subsc.png");
@@ -696,9 +811,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
    
-    &_left {
-        padding-left: 235px;
-    }
+
 
     &_text{
         color: $colorTextWhite;
@@ -708,6 +821,10 @@ a {
         line-height: normal;
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+
+    &_left {
+        padding-right: 655px;
     }
 
     &_right {
