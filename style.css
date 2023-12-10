@@ -218,7 +218,7 @@ a {
   align-content: center;
   justify-content: center;
   align-items: center;
-  transform: translate(-50px, -50px);
+  transform: translate(0px, -50px);
   width: 1140px;
   height: 600.177px;
   flex-shrink: 0;
@@ -505,6 +505,106 @@ a {
   max-width: 360px;
 }
 
+.item-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  width: 360px;
+  position: relative;
+}
+.item_img {
+  width: 100%;
+  height: 100%;
+}
+.item_name {
+  color: #000;
+  font-family: "latoregular";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 12.65px;
+  padding-left: 18px;
+}
+.item_description {
+  color: #5D5D5D;
+  font-family: "latolight";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-left: 16.5px;
+  padding-bottom: 18px;
+}
+.item_price {
+  color: #EF5B70;
+  font-family: "latolight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 18px;
+}
+
+.card-link {
+  width: 360px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.txt-box {
+  padding-top: 24.4px;
+  padding-bottom: 20px;
+  background-color: #F8F8F8;
+}
+
+.item:hover {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.item:hover .item_img {
+  filter: brightness(30%);
+}
+
+.add_two-box {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 98px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.add_two {
+  display: none;
+  padding: 8px;
+  font-family: "latolight";
+  color: #FBFBFB;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  align-items: center;
+  border: 1px solid #FBFBFB;
+  pointer-events: all;
+}
+.add_two-img {
+  margin-right: 10px;
+}
+
+.add_two:hover {
+  box-shadow: 0px 5px 8px 0px #FBFBFB;
+}
+
+.item:hover .add_two {
+  display: flex;
+}
+
 .subscription {
   background-image: url("img/Layer_subsc.png");
   background-size: cover;
@@ -646,9 +746,6 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.footer_left {
-  padding-left: 235px;
-}
 .footer_text {
   color: #FBFBFB;
   font-size: 16px;
@@ -657,6 +754,9 @@ a {
   line-height: normal;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.footer_left {
+  padding-right: 655px;
 }
 .footer_right {
   padding-right: 230px;
